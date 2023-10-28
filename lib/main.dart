@@ -1,9 +1,12 @@
+import 'package:amaan/aboutdev.dart';
 import 'package:amaan/music/music.dart';
 import 'package:amaan/tic_tac_toe/tic_tac_toe.dart';
 import 'package:amaan/to_do/to_do.dart';
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
   runApp(MergedAppsScreen());
 }
 
@@ -15,7 +18,7 @@ class MergedAppsScreen extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Merged Apps'),
+          title: const Text('AppSteroids By G10'),
           elevation: 0,
           backgroundColor: Colors.transparent,
           centerTitle: true,
@@ -76,8 +79,10 @@ class AppTilesGrid extends StatelessWidget {
             label: '',
             gradientColors: const [Colors.blue, Colors.transparent],
             onTap: () {
-              // Navigate to App 4
-              // Replace with your navigation logic
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileListScreen()),
+              );
             },
             backgroundImage: 'assets/images/a2.png',
           ),
