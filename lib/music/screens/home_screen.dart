@@ -23,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Colors.deepPurple.shade800.withOpacity(0.8),
-            Colors.deepPurple.shade200.withOpacity(0.8),
+            Colors.deepPurple.shade800,
+            Colors.deepPurple.shade200,
           ],
         ),
       ),
@@ -140,7 +140,7 @@ class _DiscoverMusic extends StatelessWidget {
             decoration: InputDecoration(
               isDense: true,
               filled: true,
-              fillColor: Colors.white,
+              fillColor: Colors.black,
               hintText: 'Search',
               hintStyle: Theme.of(context)
                   .textTheme
