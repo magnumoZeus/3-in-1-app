@@ -9,7 +9,7 @@ import '../util/todo_tile.dart';
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
-  @override 
+  @override
   _HomePageState createState() => _HomePageState();
 }
 
@@ -113,7 +113,15 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               width: 58,
               height: 58,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    // spreadRadius: 2,
+                    blurRadius: 7,
+                    offset: Offset(0, 3),
+                  ),
+                ],
                 shape: BoxShape.circle,
                 color: Colors.red,
               ),

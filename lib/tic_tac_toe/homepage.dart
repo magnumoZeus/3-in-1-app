@@ -87,14 +87,12 @@ class _HomePageState extends State<HomePage> {
           ),
           Expanded(
             child: Container(
-              child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: <Widget>[
-                    Text('TIC TAC TOE', style: myNewFontWhite),
-                    SizedBox(
-                      height: 60,
-                    ),
-                    Text(' AMAAN KHAN', style: myNewFontWhite),
+                    Text('TIC TAC TOE\n  made by:', style: myNewFontWhite),
+                    Text(' Qambar Abbas', style: myNewFontWhite),
                   ],
                 ),
               ),
@@ -195,5 +193,3 @@ class _HomePageState extends State<HomePage> {
     filledBoxes = 0;
   }
 }
-
-
